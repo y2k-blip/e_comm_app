@@ -1,6 +1,11 @@
+import { useNavigate } from 'react-router-dom';
 import './MainBannerStyles.css';
 
 const MainBanner = () => {
+  const navigate = useNavigate();
+  const navigateToListingPage = () => {
+    navigate("/ProductListingPage");
+  }
   return (
     <div className="main-banner">
       <img
@@ -12,7 +17,7 @@ const MainBanner = () => {
         <h1>Lorem ipsum dolor sit amet</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p><p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
         <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p><p> nisi ut aliquip ex ea commodo consequat.</p>
-        <button className="cta-button">Shop Now</button>
+        <button onClick={navigateToListingPage} className="cta-button">Shop Now</button>
       </div>
     </div>
   );
