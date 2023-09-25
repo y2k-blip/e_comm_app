@@ -21,6 +21,27 @@ const products: Product[] = [
     description: "Description for Product 2",
     image: "./Assets/carouselWatches.jpeg"
   },
+  {
+    id: 3,
+    name: "Product 3",
+    price: 24.99,
+    description: "Description for Product 3",
+    image: "./Assets/carouselWatches.jpeg"
+  },
+  {
+    id: 4,
+    name: "Product 4",
+    price: 99.99,
+    description: "Description for Product 2",
+    image: "./Assets/carouselWatches.jpeg"
+  },
+  {
+    id: 5,
+    name: "Product 5",
+    price: 49.99,
+    description: "Description for Product 2",
+    image: "./Assets/carouselWatches.jpeg"
+  }
 ];
 
 export default products;
