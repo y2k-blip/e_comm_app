@@ -24,8 +24,8 @@ root.render(
         ></Route>
         <Route path="/cart" element={<CartPage></CartPage>}></Route>
       </Routes>
+      <Footer></Footer>
     </BrowserRouter>
-    <Footer companyName={"Pay the Bills"} year={2012}></Footer>
   </React.StrictMode>
 );
 // If you want to start measuring performance in your app, pass a function
