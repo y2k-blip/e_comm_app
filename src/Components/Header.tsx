@@ -1,5 +1,5 @@
 import { Button, FormControl, InputLabel, MenuItem, Select } from "@mui/material";
-import "./HeaderStyles.css";
+import "../Styles/HeaderStyles.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
