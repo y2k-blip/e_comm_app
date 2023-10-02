@@ -1,14 +1,47 @@
-.main-container{
-    display: flex;
+.sign-in {
+  max-width: 400px;
+  margin: 12.62vh auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: rgba(255, 247, 243, 0.3);
 }
 
-.profile{
-    color: black;
-    margin-right: 10px;
-    cursor: pointer;
+.sign-in h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
-.cart{
-    color: black;
-    cursor: pointer;
+.form-group {
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  margin-right: 3px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: rgba(255, 247, 243, 0.3);
+}
+
+button {
+  background-color: #ff5722;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff7542;
 }

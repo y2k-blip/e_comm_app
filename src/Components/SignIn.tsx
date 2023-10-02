@@ -1,19 +1,49 @@
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import React, { useState } from 'react';
 import "../Styles/SignInStyles.css";
-import PersonIcon from "@mui/icons-material/Person";
-import { useNavigate } from "react-router-dom";
 
-const SignIn = () => {
-  const navigate = useNavigate();
-  const navigateToCart = () => {
-    navigate("/CartPage");
+const SignIn: React.FC = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
   };
+
+  const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPassword(e.target.value);
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    // Handle sign-in logic here (e.g., send data to an API)
+  };
+
   return (
-    <div className="main-container">
-      <PersonIcon className="profile"></PersonIcon>
-      <div onClick={navigateToCart}>
-        <ShoppingCartIcon className="cart"></ShoppingCartIcon>
-      </div>
+    <div className="sign-in">
+      <h2>Sign In</h2>
+      <form onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            value={email}
+            onChange={handleEmailChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            value={password}
+            onChange={handlePasswordChange}
+            required
+          />
+        </div>
+        <button type="submit">Sign In</button>
+      </form>
     </div>
   );
 };

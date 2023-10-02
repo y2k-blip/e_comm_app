@@ -1,6 +1,6 @@
 import "../Styles/HeaderStyles.css";
 import { useNavigate } from "react-router-dom";
-import SignIn from "./SignIn";
+import SignIn from "./SignInCartBtn";
 
 const Header = () => {
   const navigate = useNavigate();

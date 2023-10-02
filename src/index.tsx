@@ -7,6 +7,7 @@ import HomePage from "./Pages/HomePage";
 import CartPage from "./Pages/CartPage";
 import reportWebVitals from "./reportWebVitals";
 import AboutUsPage from "./Pages/AboutUsPage";
+import SignInPage from "./Pages/SignInPage";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -20,6 +21,7 @@ root.render(
         <Route path="/home" element={<HomePage />}></Route>
         <Route path="/cart" element={<CartPage></CartPage>}></Route>
         <Route path="/about" element={<AboutUsPage></AboutUsPage>}></Route>
+        <Route path="/signIn" element={<SignInPage></SignInPage>}></Route>
       </Routes>
       <Footer></Footer>
     </BrowserRouter>
