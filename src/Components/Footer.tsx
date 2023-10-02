@@ -1,5 +1,6 @@
 import React from "react";
 import "../Styles/FooterStyles.css";
+import AboutUsPage from './../Pages/AboutUsPage';
 
 const Footer: React.FC = () => {
   return (
@@ -19,7 +20,7 @@ const Footer: React.FC = () => {
               <a href="../Pages/ProductListingPage.tsx">Products</a>
             </li>
             <li>
-              <a href="/about">About</a>
+              <a href="../about">About</a>
             </li>
             <li>
               <a href="/contact">Contact</a>

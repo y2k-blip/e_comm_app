@@ -1,0 +1,14 @@
+.main-container{
+    display: flex;
+}
+
+.profile{
+    color: black;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.cart{
+    color: black;
+    cursor: pointer;
+}

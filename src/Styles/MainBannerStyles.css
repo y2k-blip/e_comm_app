@@ -30,13 +30,12 @@
 
 .banner-content p {
   font-size: 18px;
-  /* margin-bottom: 30px; */
   overflow: visible;
 }
 
 .cta-button {
   padding: 10px 20px;
-  margin-top: 10px;
+  margin-top: 35px;
   font-size: 18px;
   background-color: #ff5722;
   border: none;

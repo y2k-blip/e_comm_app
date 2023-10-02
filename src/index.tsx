@@ -3,10 +3,10 @@ import ReactDOM from "react-dom/client";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ProductListingPage from "./Pages/ProductListingPage";
 import HomePage from "./Pages/HomePage";
 import CartPage from "./Pages/CartPage";
 import reportWebVitals from "./reportWebVitals";
+import AboutUsPage from "./Pages/AboutUsPage";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -18,11 +18,8 @@ root.render(
       <Routes>
         <Route index element={<HomePage></HomePage>}></Route>
         <Route path="/home" element={<HomePage />}></Route>
-        <Route
-          path="/productlistingpage"
-          element={<ProductListingPage />}
-        ></Route>
         <Route path="/cart" element={<CartPage></CartPage>}></Route>
+        <Route path="/about" element={<AboutUsPage></AboutUsPage>}></Route>
       </Routes>
       <Footer></Footer>
     </BrowserRouter>
