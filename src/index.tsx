@@ -8,23 +8,28 @@ import CartPage from "./Pages/CartPage";
 import reportWebVitals from "./reportWebVitals";
 import AboutUsPage from "./Pages/AboutUsPage";
 import SignInPage from "./Pages/SignInPage";
+import ProductListingPage from "./Pages/ProductListingPage";
+// import { AppProvider } from "./Components/Context";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Header></Header>
-      <Routes>
-        <Route index element={<HomePage></HomePage>}></Route>
-        <Route path="/home" element={<HomePage />}></Route>
-        <Route path="/cart" element={<CartPage></CartPage>}></Route>
-        <Route path="/about" element={<AboutUsPage></AboutUsPage>}></Route>
-        <Route path="/signIn" element={<SignInPage></SignInPage>}></Route>
-      </Routes>
-      <Footer></Footer>
-    </BrowserRouter>
+    {/* <AppProvider childern={undefined}> */}
+      <BrowserRouter>
+        <Header></Header>
+        <Routes>
+          <Route index element={<HomePage></HomePage>}></Route>
+          <Route path="/home" element={<HomePage />}></Route>
+          <Route path="/cart" element={<CartPage></CartPage>}></Route>
+          <Route path="/about" element={<AboutUsPage></AboutUsPage>}></Route>
+          <Route path="/signIn" element={<SignInPage></SignInPage>}></Route>
+          <Route path="/productListing" element={<ProductListingPage></ProductListingPage>}></Route>
+        </Routes>
+        <Footer></Footer>
+      </BrowserRouter>
+    {/* </AppProvider> */}
   </React.StrictMode>
 );
 // If you want to start measuring performance in your app, pass a function

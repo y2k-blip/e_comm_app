@@ -4,8 +4,8 @@ import '../Styles/MainBannerStyles.css';
 const MainBanner = () => {
   const navigate = useNavigate();
   const navigateToListingPage = () => {
-    navigate("/ProductListingPage");
-  }
+    navigate("/productListing");
+  };
   return (
     <div className="main-banner">
       <img
