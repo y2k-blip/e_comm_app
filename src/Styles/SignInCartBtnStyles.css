@@ -1,14 +1,48 @@
-.main-container{
-    display: flex;
+.main-container {
+  display: flex;
 }
 
-.profile{
-    color: black;
-    margin-right: 10px;
-    cursor: pointer;
+.signIn-container,
+.cart-container {
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 60px;
+  height: 39px;
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  width: auto;
+  max-width: 39px; 
+  -webkit-transition: max-width 0.5s;
+  transition: max-width 0.5s;
+  cursor: pointer;
+  left: 50%;
+  right: 50%;
 }
 
-.cart{
-    color: black;
-    cursor: pointer;
+.cart-container,
+.cart-container:hover {
+  margin: 0 0 0 5px;
+  padding: 0 0 0 2px;
+}
+
+.signIn-container:hover,
+.cart-container:hover {
+  max-width: 300px;
+}
+
+.profile,
+.cart {
+  font-size: 16px;
+  margin-right: 15px;
+  padding: 0px 8px;
+  display: flex;
+  align-items: center;
+}
+
+.signIn-text,
+.cart-text {
+  white-space: nowrap;
+  padding-right: 15px;
 }
