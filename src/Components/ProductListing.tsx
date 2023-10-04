@@ -22,7 +22,7 @@ const ProductListing = () => {
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
-      .then((data) => setProducts(data.slice(0, 10)))
+      .then((data) => setProducts(data))
       .catch((err: any) => setError(err));
     console.log(setProducts);
   }, []);
@@ -37,10 +37,9 @@ const ProductListing = () => {
                 <div className="img-cntr">
                   <img className="img" src={products.image} alt="" />
                 </div>
-                <div className="price">{products.price}</div>
+                <div className="price">Price: ${products.price}</div>
                 <button className="cta-add-to-cart">Add To Cart</button>
               </div>
-              // </div>
             ))
           : <span className="loader"></span>}
       </div>
