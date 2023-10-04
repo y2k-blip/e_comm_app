@@ -1,10 +1,18 @@
-import { isDisabled } from "@testing-library/user-event/dist/utils";
 import React, { useEffect, useState } from "react";
-
+import "../Styles/ProductListingStyles.css";
 interface Products {
   title: string;
   id: number;
   image: string;
+  price: number;
+  description: string;
+  category: string;
+  rating: Rating;
+}
+
+interface Rating {
+  rate: number;
+  count: number;
 }
 
 const ProductListing = () => {
@@ -21,14 +29,21 @@ const ProductListing = () => {
 
   return (
     <>
-      {products.length > 0
-        ? products.map((products: Products) => (
-            <>
-              <div>{products.title}</div>
-              <img src={products.image} alt="" />
-            </>
-          ))
-        : "Loading"}
+      <div className="products-main-container">
+        {products.length > 0
+          ? products.map((products: Products) => (
+              <div className="secondary-container">
+                <div className="title">{products.title}</div>
+                <div className="img-cntr">
+                  <img className="img" src={products.image} alt="" />
+                </div>
+                <div className="price">{products.price}</div>
+                <button className="cta-add-to-cart">Add To Cart</button>
+              </div>
+              // </div>
+            ))
+          : <span className="loader"></span>}
+      </div>
     </>
   );
 };

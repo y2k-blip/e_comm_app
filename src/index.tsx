@@ -9,14 +9,13 @@ import reportWebVitals from "./reportWebVitals";
 import AboutUsPage from "./Pages/AboutUsPage";
 import SignInPage from "./Pages/SignInPage";
 import ProductListingPage from "./Pages/ProductListingPage";
-// import { AppProvider } from "./Components/Context";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
-    {/* <AppProvider childern={undefined}> */}
       <BrowserRouter>
         <Header></Header>
         <Routes>
@@ -29,7 +28,6 @@ root.render(
         </Routes>
         <Footer></Footer>
       </BrowserRouter>
-    {/* </AppProvider> */}
   </React.StrictMode>
 );
 // If you want to start measuring performance in your app, pass a function
