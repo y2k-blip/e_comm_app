@@ -10,7 +10,6 @@ import reportWebVitals from "./reportWebVitals";
 import AboutUsPage from "./Pages/AboutUsPage";
 import SignInPage from "./Pages/SignInPage";
 import ProductListingPage from "./Pages/ProductListingPage";
-import CategoriesPage from "./Pages/CategoriesPage";
 import ContactUsPage from "./Pages/ContactUsPage";
 
 const root = ReactDOM.createRoot(
@@ -28,7 +27,6 @@ root.render(
           <Route path="/about" element={<AboutUsPage></AboutUsPage>}></Route>
           <Route path="/signIn" element={<SignInPage></SignInPage>}></Route>
           <Route path="/productListing" element={<ProductListingPage></ProductListingPage>}></Route>
-          <Route path="/categoriesListing" element={<CategoriesPage></CategoriesPage>}></Route>
           <Route path="/contactUs" element={<ContactUsPage></ContactUsPage>}></Route>
         </Routes>
         <Footer></Footer>
