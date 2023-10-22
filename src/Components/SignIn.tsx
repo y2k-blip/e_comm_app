@@ -3,8 +3,6 @@ import "../Styles/SignInStyles.css";
 
 const SignIn: React.FC = () => {
   const [password, setPassword] = useState("");
-
-  const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
   const [email, setEmail] = useState("");
   const [error, setError] = useState<string | null>(null);
   const handleEmailChange = (event: ChangeEvent<HTMLInputElement>) => {

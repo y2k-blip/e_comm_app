@@ -6,12 +6,20 @@ const Header = () => {
   const navigate = useNavigate();
   const navigateToHome = () => {
     navigate("/");
-  }
+  };
+  const navigateToCategories = () => {
+    navigate("/categoriesListing");
+  };
 
   return (
     <header className="header">
       <div className="left-section">
-        <img onClick={navigateToHome} src={"./Assets/logo.png"} alt="Logo" className="logo"/>
+        <img
+          onClick={navigateToHome}
+          src={"./Assets/logo.png"}
+          alt="Logo"
+          className="logo"
+        />
       </div>
       <div className="right-section">
         <SignIn></SignIn>

@@ -12,3 +12,14 @@
   height: 10vh;
   cursor: pointer;
 }
+
+.categories{
+  cursor: pointer;
+  align-self: center;
+  color: #333;
+  margin-left: 20px;
+}
+
+.left-section{
+  display: flex;
+}

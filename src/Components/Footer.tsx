@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
               <a href="../about">About</a>
             </li>
             <li>
-              <a href="/contact">Contact</a>
+              <a href="/contactUs">Contact</a>
             </li>
           </ul>
         </div>
