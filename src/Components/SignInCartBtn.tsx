@@ -3,7 +3,7 @@ import "../Styles/SignInCartBtnStyles.css";
 import PersonIcon from "@mui/icons-material/Person";
 import { useNavigate } from "react-router-dom";
 
-const SignInCartBtn = () => {
+const SignInCartBtn: React.FC = ({}) => {
   const navigate = useNavigate();
   const navigateToCart = () => {
     navigate("/CartPage");
@@ -21,9 +21,8 @@ const SignInCartBtn = () => {
 
         <div className="cart-container" onClick={navigateToCart}>
           <ShoppingCartIcon className="cart"></ShoppingCartIcon>
-          <div className="cart-text">My Cart (0)</div>
+          <div className="cart-text">My Cart</div>
         </div>
-
       </div>
     </>
   );

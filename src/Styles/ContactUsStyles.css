@@ -1,0 +1,7 @@
+.cntc-main-container {
+  display: flex;
+  justify-content: space-around;
+  border: 2px solid green;
+  transform: translate(50%, 50%);
+}
+

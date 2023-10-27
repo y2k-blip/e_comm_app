@@ -1,13 +1,24 @@
-import React, { useState } from 'react';
+import React, { ChangeEvent, useEffect, useState } from "react";
 import "../Styles/SignInStyles.css";
 
 const SignIn: React.FC = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-
-  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setEmail(e.target.value);
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState<string | null>(null);
+  const handleEmailChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setEmail(event.target.value);
   };
+  const validateEmail = () => {
+    const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+    if (!emailRegex.test(email)) {
+      setError("Please enter a valid email address");
+    } else {
+      setError("");
+    }
+  };
+  useEffect(() => {
+    validateEmail();
+  }, [email]);
 
   const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(e.target.value);
@@ -31,6 +42,7 @@ const SignIn: React.FC = () => {
             onChange={handleEmailChange}
             required
           />
+          {error && <div>{error}</div>}
         </div>
         <div className="form-group">
           <label htmlFor="password">Password</label>
