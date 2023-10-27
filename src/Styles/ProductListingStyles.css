@@ -5,6 +5,14 @@
   margin: 20px;
 }
 
+.secondary-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20vw;
+  margin: inherit;
+}
+
 .img-cntr {
   display: flex;
   flex-direction: column;
@@ -15,12 +23,14 @@
 .pro-img {
   height: 100%;
   width: 100%;
+  padding: 10px;
 }
 
 .title {
   align-self: center;
   justify-self: center;
   word-wrap: break-word;
+  text-align: center;
 }
 
 .loader {
@@ -33,6 +43,7 @@
   box-sizing: border-box;
   animation: rotation 1s linear infinite;
 }
+
 .loader::after {
   content: '';  
   box-sizing: border-box;
