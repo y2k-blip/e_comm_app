@@ -28,9 +28,11 @@
 
 .title {
   align-self: center;
-  justify-self: center;
-  word-wrap: break-word;
   text-align: center;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .loader {
