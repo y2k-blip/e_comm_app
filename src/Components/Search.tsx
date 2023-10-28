@@ -5,18 +5,18 @@ const Search = () => {
     <>
       <div className="search-box">
         <button className="btn-search">
-          {/* <i className="fas fa-search"></i> */}
           <svg
             className="icon"
             xmlns="http://www.w3.org/2000/svg"
             x="0px"
             y="0px"
-            width="100"
-            height="100"
+            width="0"
+            height="0"
             viewBox="0,0,256,256"
+            fill="#333"
           >
             <g
-              fill="#000DFF"
+              fill="#f2f2f2"
               fill-rule="nonzero"
               stroke="none"
               stroke-width="1"
