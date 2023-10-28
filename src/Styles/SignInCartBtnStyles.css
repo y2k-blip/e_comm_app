@@ -21,6 +21,10 @@
   right: 50%;
 }
 
+.signIn-container, .cart-container > svg{
+  color: #f2f2f2;
+}
+
 .cart-container,
 .cart-container:hover {
   margin: 0 0 0 5px;
