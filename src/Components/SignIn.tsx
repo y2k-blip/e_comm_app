@@ -54,7 +54,7 @@ const SignIn: React.FC = () => {
             required
           />
         </div>
-        <button type="submit">Sign In</button>
+        <button className="cta-submit" type="submit">Sign In</button>
       </form>
     </div>
   );
