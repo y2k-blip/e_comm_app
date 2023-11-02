@@ -46,6 +46,19 @@
   animation: rotation 1s linear infinite;
 }
 
+.cta-add-to-cart{
+  background-color: #ff5722;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.cta-add-to-cart:hover{
+  background-color: #ff5749;
+}
+
+.cta-add-to-cart
 .loader::after {
   content: '';  
   box-sizing: border-box;
