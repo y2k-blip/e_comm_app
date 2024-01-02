@@ -8,17 +8,17 @@ const SignIn: React.FC = () => {
   const handleEmailChange = (event: ChangeEvent<HTMLInputElement>) => {
     setEmail(event.target.value);
   };
-  const validateEmail = () => {
-    const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-    if (!emailRegex.test(email)) {
-      setError("Please enter a valid email address");
-    } else {
-      setError("");
-    }
-  };
-  useEffect(() => {
-    validateEmail();
-  }, [email]);
+  // const validateEmail = () => {
+  //   const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+  //   if (!emailRegex.test(email)) {
+  //     setError("Please enter a valid email address");
+  //   } else {
+  //     setError("");
+  //   }
+  // };
+  // useEffect(() => {
+  //   validateEmail();
+  // }, [email]);
 
   const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(e.target.value);
@@ -26,7 +26,6 @@ const SignIn: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle sign-in logic here (e.g., send data to an API)
   };
 
   return (
@@ -39,7 +38,6 @@ const SignIn: React.FC = () => {
             type="email"
             id="email"
             value={email}
-            onChange={handleEmailChange}
             required
           />
           {error && <div>{error}</div>}
