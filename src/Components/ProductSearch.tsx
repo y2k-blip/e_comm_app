@@ -1,10 +1,9 @@
 import React from "react";
+import "../Styles/ProductSearchStyles.css";
 
 interface ProductSearchProps {
   searchTerm: string;
   setSearchTerm: React.Dispatch<React.SetStateAction<string>>;
-  minPrice: number;
-  setMinPrice: React.Dispatch<React.SetStateAction<number>>;
   maxPrice: number;
   setMaxPrice: React.Dispatch<React.SetStateAction<number>>;
   category: string;
@@ -14,40 +13,46 @@ interface ProductSearchProps {
 const ProductSearch: React.FC<ProductSearchProps> = ({
   searchTerm,
   setSearchTerm,
-  minPrice,
-  setMinPrice,
   maxPrice,
   setMaxPrice,
   category,
   setCategory,
 }) => {
   return (
-    <div>
-      <input
-        type="text"
-        placeholder="Search products by name"
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-      />
-      <input
-        type="number"
-        placeholder="Min Price"
-        value={minPrice}
-        onChange={(e) => setMinPrice(Number(e.target.value))}
-      />
-      <input
-        type="number"
-        placeholder="Max Price"
-        value={maxPrice}
-        onChange={(e) => setMaxPrice(Number(e.target.value))}
-      />
-      <select value={category} onChange={(e) => setCategory(e.target.value)}>
-        <option value="">All Categories</option>
-        <option value="electronics">Electronics</option>
-        <option value="jewelery">Jewelery</option>
-        <option value="men's clothing">Men's Clothing</option>
-        <option value="women's clothing">Women's Clothing</option>
-      </select>
+    <div className="filter-parent-container">
+      <div className="filter-search">
+        <span>Search within products</span>
+        <input
+          type="text"
+          placeholder="Enter keywords"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+      </div>
+      <div className="filter-secondary-container">
+        <div className="filter-max-price">
+          <span>Enter maximum price:</span>
+          <input
+            type="number"
+            placeholder="Max Price"
+            value={maxPrice}
+            onChange={(e) => setMaxPrice(Number(e.target.value))}
+          />
+        </div>
+        <div className="filter-dropdown">
+          <span>Filter by Category</span>
+          <select
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
+          >
+            <option value="">All Categories</option>
+            <option value="electronics">Electronics</option>
+            <option value="jewelery">Jewelery</option>
+            <option value="men's clothing">Men's Clothing</option>
+            <option value="women's clothing">Women's Clothing</option>
+          </select>
+        </div>
+      </div>
     </div>
   );
 };

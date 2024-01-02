@@ -5,6 +5,10 @@
   margin: 20px;
 }
 
+.filter-container{
+  width: 100%;
+}
+
 .secondary-container{
   display: flex;
   flex-direction: column;
