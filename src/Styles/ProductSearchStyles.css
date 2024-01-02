@@ -1,0 +1,6 @@
+.filter-secondary-container{
+  display: flex;
+  justify-content:space-around ;
+  align-content: space-around;
+  margin: 1%;
+}

@@ -14,7 +14,6 @@ interface Products {
 const ProductListing = () => {
   const [products, setProducts] = useState<Products[]>([]);
   const [searchTerm, setSearchTerm] = useState<string>("");
-  const [minPrice, setMinPrice] = useState<number>(0);
   const [maxPrice, setMaxPrice] = useState<number>(0);
   const [category, setCategory] = useState<string>("");
 
@@ -30,27 +29,26 @@ const ProductListing = () => {
       .toLowerCase()
       .includes(searchTerm.toLowerCase());
     const priceMatch =
-      (minPrice === 0 || product.price >= minPrice) &&
       (maxPrice === 0 || product.price <= maxPrice);
     const categoryMatch =
-      category === "" || product.category.toLowerCase() === category.toLowerCase();
-
+      category === "" ||
+      product.category.toLowerCase() === category.toLowerCase();
     return titleMatch && priceMatch && categoryMatch;
   });
 
   return (
     <>
       <div className="products-main-container">
-        <ProductSearch
-          searchTerm={searchTerm}
-          setSearchTerm={setSearchTerm}
-          minPrice={minPrice}
-          setMinPrice={setMinPrice}
-          maxPrice={maxPrice}
-          setMaxPrice={setMaxPrice}
-          category={category}
-          setCategory={setCategory}
-        />
+        <div className="filter-container">
+          <ProductSearch
+            searchTerm={searchTerm}
+            setSearchTerm={setSearchTerm}
+            maxPrice={maxPrice}
+            setMaxPrice={setMaxPrice}
+            category={category}
+            setCategory={setCategory}
+          />
+        </div>
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product: Products) => (
             <div key={product.id} className="secondary-container">
