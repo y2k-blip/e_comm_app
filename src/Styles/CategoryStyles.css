@@ -1,0 +1,22 @@
+.categories-container > h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.se-cntr {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  max-width: 100vw;
+  flex-wrap: wrap;
+}
+
+.categories-img {
+  width: 25vw;
+  height: 42vh;
+}
+
+.secondary-categories-container > h4 {
+  text-align: center;
+}
