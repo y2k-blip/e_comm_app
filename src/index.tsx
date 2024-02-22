@@ -6,7 +6,6 @@ import Footer from "./Components/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
 import CartPage from "./Pages/CartPage";
-import reportWebVitals from "./reportWebVitals";
 import AboutUsPage from "./Pages/AboutUsPage";
 import SignInPage from "./Pages/SignInPage";
 import ProductListingPage from "./Pages/ProductListingPage";
@@ -33,7 +32,3 @@ root.render(
       </BrowserRouter>
   </React.StrictMode>
 );
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
