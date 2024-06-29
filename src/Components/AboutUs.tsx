@@ -4,7 +4,7 @@ import React from 'react';
 const AboutUs: React.FC = () => {
   return (
     <div className="about-us">
-      <h1>About Us</h1>
+      <h1>About Us with me</h1>
       <p>
         Welcome to our e-commerce store! We are a passionate team dedicated to providing high-quality products and excellent customer service.
       </p>
